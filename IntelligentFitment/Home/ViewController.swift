@@ -1,35 +1,35 @@
-//
 //  ViewController.swift
-//  IntelligentFitment
-//
-//  Created by software on 16/10/20.
-//  Copyright © 2016年 shuoren. All rights reserved.
-//
+//  2016-10-20
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    var archivePath = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let docPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+        archivePath = docPath.stringByAppendingPathComponent("device.archive")
+        
+        print(archivePath)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func archiveTapped(sender: AnyObject) {
+        let model = DeviceModel(sno: "shuoren_001", name: "macbook",date:"2016-10-20")
+        
+        DeviceModel.save(model, filePath: archivePath)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func unarchiveTapped(sender: AnyObject) {
+        let model = DeviceModel.get(archivePath)
+        
+        print(model.sno)
+        print(model.name)
+        print(model.date)
     }
-    */
-
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
