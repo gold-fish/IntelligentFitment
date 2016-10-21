@@ -15,7 +15,6 @@ class DeviceModel: NSObject,NSCoding{
     
     //归档时自动调用
     func encodeWithCoder(aCoder: NSCoder){
-        print("归档了")
         aCoder.encodeObject(self.sno, forKey: "sno")
         aCoder.encodeObject(self.name, forKey: "name")
         aCoder.encodeObject(self.date, forKey: "date")
@@ -24,8 +23,6 @@ class DeviceModel: NSObject,NSCoding{
     //解档时自动调用
     required init(coder aDecoder: NSCoder) {
         super.init()
-        
-        print("解档了")
         
         self.sno = aDecoder.decodeObjectForKey("sno") as! String
         self.name = aDecoder.decodeObjectForKey("name") as! String

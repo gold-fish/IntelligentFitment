@@ -29,6 +29,22 @@
                                     <action selector="unarchiveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NfA-Rg-NQ5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="owd-g9-lj7">
+                                <rect key="frame" x="90" y="289" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="扫描二维码"/>
+                                <connections>
+                                    <action selector="QRCodeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjD-Fa-lz6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zAa-P3-63b">
+                                <rect key="frame" x="112" y="86" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="跳转"/>
+                                <connections>
+                                    <segue destination="77k-Wb-aaT" kind="modal" id="ypv-mI-RIr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -36,6 +52,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="200" y="289.20666666666665"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="AIT-rY-Hgq">
+            <objects>
+                <viewController id="77k-Wb-aaT" customClass="SecondViewController" customModule="IntelligentFitment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9eZ-Dw-DxS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mr7-TR-fR8">
+                                <rect key="frame" x="145" y="223" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="returnTapped:" destination="77k-Wb-aaT" eventType="touchUpInside" id="6jX-Le-Dtu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ndp-yW-VGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="588" y="289"/>
         </scene>
     </scenes>
 </document>
