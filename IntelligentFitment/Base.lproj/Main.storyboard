@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ona-Jb-bdT">
-                                <rect key="frame" x="104" y="143" width="30" height="30"/>
+                                <rect key="frame" x="112" y="80" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="归档"/>
                                 <connections>
@@ -22,7 +22,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3cf-v1-V9J">
-                                <rect key="frame" x="104" y="212" width="30" height="30"/>
+                                <rect key="frame" x="112" y="126" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="解档"/>
                                 <connections>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="owd-g9-lj7">
-                                <rect key="frame" x="90" y="289" width="75" height="30"/>
+                                <rect key="frame" x="90" y="169" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="扫描二维码"/>
                                 <connections>
@@ -38,20 +38,35 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zAa-P3-63b">
-                                <rect key="frame" x="112" y="86" width="30" height="30"/>
+                                <rect key="frame" x="112" y="42" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="跳转"/>
                                 <connections>
                                     <segue destination="77k-Wb-aaT" kind="modal" id="ypv-mI-RIr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4jx-BF-JNa">
+                                <rect key="frame" x="90" y="213" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="生成二维码"/>
+                                <connections>
+                                    <action selector="createQRCodeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZQn-55-ygt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="dxf-0q-x0E">
+                                <rect key="frame" x="33" y="282" width="180" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imgQRCode" destination="dxf-0q-x0E" id="ANZ-LW-Rtr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="200" y="289.20666666666665"/>
+            <point key="canvasLocation" x="200" y="289"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="AIT-rY-Hgq">
